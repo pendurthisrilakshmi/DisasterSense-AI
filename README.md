@@ -80,3 +80,53 @@ Loaded 7613 rows from train.csv
 Saved processed dataset to: data/tweets.csv
 Final dataset size: 7613 rows
 ```
+
+## Text Preprocessing
+
+Raw tweets contain:
+- URLs, punctuation, uppercase words, common stopwords
+
+These create noise and make it harder for the model to learn useful patterns.
+
+The preprocessing pipeline cleans tweets before training.
+
+---
+
+## Preprocessing Steps
+
+- Remove URLs
+- Convert text to lowercase
+- Remove punctuation
+- Tokenize words
+- Remove stopwords
+
+---
+
+## Example
+
+### Input Tweet
+
+```text
+HELP! There's a fire near my house! Check http://example.com #disaster
+```
+
+### Processed Tweet
+
+```text
+help fire near house check disaster
+```
+
+---
+
+## Run Preprocessing Module
+
+```bash
+cd src
+python preprocess.py
+```
+
+---
+
+## Demo Screenshot
+
+![Preprocessing Demo](screenshots/preprocessing_demo.png)
