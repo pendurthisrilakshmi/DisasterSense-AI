@@ -130,3 +130,16 @@ python preprocess.py
 ## Demo Screenshot
 
 ![Preprocessing Demo](screenshots/preprocessing_demo.png)
+
+## Run Training Module
+
+```bash
+cd src
+python train.py
+```
+
+---
+
+## Demo Screenshot
+
+![Preprocessing Demo](screenshots/training_pipeline.png)
