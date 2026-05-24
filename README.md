@@ -127,19 +127,28 @@ python preprocess.py
 
 ---
 
-## Demo Screenshot
+## Terminal output Screenshot
 
 ![Preprocessing Demo](screenshots/preprocessing_demo.png)
 
 ## Run Training Module
 
 ```bash
-cd src
 python train.py
 ```
 
 ---
 
-## Demo Screenshot
+## Terminal output Screenshot
 
 ![Preprocessing Demo](screenshots/training_pipeline.png)
+
+```bash
+python evaluate.py
+```
+
+---
+
+## Terminal output Screenshot
+
+![Preprocessing Demo](screenshots/model_evaluation.png)
