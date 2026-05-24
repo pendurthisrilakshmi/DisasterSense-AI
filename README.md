@@ -143,6 +143,7 @@ python train.py
 
 ![Preprocessing Demo](screenshots/training_pipeline.png)
 
+## Run Evaluation module
 ```bash
 python evaluate.py
 ```
@@ -152,3 +153,20 @@ python evaluate.py
 ## Terminal output Screenshot
 
 ![Preprocessing Demo](screenshots/model_evaluation.png)
+
+## Tweet Prediction
+
+The trained model can classify new tweets as:
+- Disaster
+- Non-Disaster
+
+Run prediction script:
+
+```bash
+python predict.py
+```
+
+### Prediction Demo
+
+![Prediction Demo](screenshots/prediction_demo.png)
+![Prediction Demo](screenshots/interactive_prediction.png)
