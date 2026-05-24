@@ -1,8 +1,27 @@
 # 🚨 DisasterSense-AI
 
-An NLP-powered disaster tweet classification system using TF-IDF and Machine Learning.
+An NLP-powered disaster tweet classification system using TF-IDF vectorization and Logistic Regression.
 
 ---
+
+## Project Structure
+
+```text
+DisasterSense-AI/
+├── data/
+│   └── tweets.csv
+│   └── train.csv
+├── screenshots/
+├── scripts/
+│   └── prepare_tweets_csv.py
+├── src/
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+├── README.md
+└── requirements.txt
+```
 
 ## Environment Setup
 
@@ -21,7 +40,7 @@ python -m venv disastersense-ai-env
 .\disastersense-ai-env\Scripts\Activate
 ```
 
-### 4. Install Required Dependencies
+### 3. Install Required Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -127,7 +146,7 @@ python preprocess.py
 
 ---
 
-## Terminal output Screenshot
+## Preprocessing Output
 
 ![Preprocessing Demo](screenshots/preprocessing_demo.png)
 
@@ -139,20 +158,40 @@ python train.py
 
 ---
 
-## Terminal output Screenshot
+## Training Pipeline Output
 
-![Preprocessing Demo](screenshots/training_pipeline.png)
+![Training pipeline](screenshots/training_pipeline.png)
 
-## Run Evaluation module
+## Run Evaluation Module
 ```bash
 python evaluate.py
 ```
 
 ---
 
-## Terminal output Screenshot
+## Model Evaluation Results
 
-![Preprocessing Demo](screenshots/model_evaluation.png)
+![Model Evaluation Results](screenshots/model_evaluation.png)
+
+## Model Performance
+
+Current model performance on the test dataset:
+
+- Accuracy: ~82%
+- Precision: ~85%
+- Recall: ~72%
+- F1-Score: ~78%
+
+## Model Tuning Experiments
+
+Additional experiments were performed using custom class weights to improve disaster tweet recall.
+
+These experiments highlighted the tradeoff between:
+- recall improvement
+- false positives
+- overall F1-score balance
+
+The final model configuration was selected based on balanced overall performance.
 
 ## Tweet Prediction
 
@@ -170,3 +209,13 @@ python predict.py
 
 ![Prediction Demo](screenshots/prediction_demo.png)
 ![Prediction Demo](screenshots/interactive_prediction.png)
+
+
+## Future Improvements
+
+Possible future enhancements:
+- Streamlit web application
+- Advanced NLP models
+- Real-time tweet monitoring
+- Explainable AI visualizations
+- Deployment using cloud platforms
